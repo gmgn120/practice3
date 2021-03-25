@@ -7,6 +7,7 @@ class PostImagesController < ApplicationController
     @post_image = PostImage.new(post_image_params)
     @post_image.user_id = current_user.id
     if @post_image.save
+    flash[:success] = "successfully"
     redirect_to post_images_path
     else
       render :new
