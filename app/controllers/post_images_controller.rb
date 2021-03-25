@@ -10,6 +10,7 @@ class PostImagesController < ApplicationController
     flash[:success] = "successfully"
     redirect_to post_images_path
     else
+      flash[:alert] = "error"
       render :new
     end
   end
